@@ -27,6 +27,7 @@ class _HeightSettings(_SelfExplainMixin):
 
 
 class Settings(_SelfExplainMixin):
+    qgis_path: str
     sample_per_m: int
     chunk_size: int
     images_path: str
@@ -40,10 +41,13 @@ class Settings(_SelfExplainMixin):
         self.images_path = "images/HR/"
         self.project_path = "./project.qgis"
         self.height_settings = _HeightSettings()
+        self.qgis_path = "/usr/bin/qgis"
 
         file = open("config.json")
         config: dict = json.loads(file.read())
         file.close()
+        if (config.get("qgisPath")):
+            self.qgis_path = config.get("qgisPath")
         if (config.get("project")):
             self.project_path = config.get("project")
         if (config.get("chunkSize")):

@@ -1,5 +1,6 @@
 {
     "project": "/home/sinkapoy/project.qgz",
+    "qgisPath": "/usr/bin/qgis",
     "chunkSize": 256,
     "samplePerMeter": 2,
     "imagePath": "images/HR/",

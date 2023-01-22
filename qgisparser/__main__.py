@@ -2,14 +2,10 @@ import qgis.core as core
 from .process_raster_layer import multiband_layer_image
 from .utils.settings import Settings
 
-threads = 4
-
 settings = Settings()
-settings.chunk_size = 256
-settings.sample_per_m = 4
 print("settings:", settings)
 print("==========")
-core.QgsApplication.setPrefixPath("/usr/bin/qgis", True)
+core.QgsApplication.setPrefixPath(settings.qgis_path, True)
 app = core.QgsApplication([], False)
 project = core.QgsProject.instance()
 project.read(settings.project_path)
