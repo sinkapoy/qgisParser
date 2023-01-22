@@ -1,0 +1,10 @@
+{
+    "project": "/home/sinkapoy/project.qgz",
+    "chunkSize": 256,
+    "samplePerMeter": 2,
+    "imagePath": "images/HR/",
+    "heightSettings": {
+        "maxAckTileSize": 1024,
+        "heightPath": "images/height/"
+    }
+}
